@@ -59,17 +59,17 @@ google_percentage = (google_counter / total_domains) * 100
 microsoft_percentage = (microsoft_counter / total_domains) * 100
 both_percentage = ((google_counter + microsoft_counter - both_counter) / total_domains) * 100
 
-# Format the percentage with up to 2 decimal places
+# Format the percentage
 google_percentage_formatted = "{:.2f}".format(google_percentage)
 microsoft_percentage_formatted = "{:.2f}".format(microsoft_percentage)
 both_percentage_formatted = "{:.2f}".format(both_percentage)
 
-# Print the final list with all the previously analyzed domains inserted
+
 print("Domains and email service information:")
 for domain, info in domain_info_list:
     print(domain, ":", info)
 
-# Print the percentages
+
 print("Percentage of domains using only Google Workspace:", google_percentage_formatted, "%" )
 print("Percentage of domains using only Microsoft 365:", microsoft_percentage_formatted, "%")
 print("Percentage of domains using both Google Workspace and Microsoft 365:", both_percentage_formatted, "%")
